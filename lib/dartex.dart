@@ -24,3 +24,14 @@ class TypeIdItem {
 
   TypeIdItem({required this.descriptorIdx});
 }
+
+class ProtoIdItem {
+  int shortyIdx; //uint
+  int returnTypeIdx; //uint
+  int parametersOff; //uint
+
+  ProtoIdItem(
+      {required this.shortyIdx,
+      required this.returnTypeIdx,
+      required this.parametersOff});
+}
