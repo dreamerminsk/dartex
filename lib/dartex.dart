@@ -120,11 +120,20 @@ class ClassDataItem {
       required this.virtualMethods});
 }
 
-class EncodedMethod {}
-
 class EncodedField {
   int fieldIdxDiff; //uleb128
   int accessFlags; //uleb128
 
   EncodedField({required this.fieldIdxDiff, required this.accessFlags});
+}
+
+class EncodedMethod {
+  int methodIdxDiff; //uleb128
+  int accessFlags; //uleb128
+  int codeOff; //uleb128
+
+  EncodedMethod(
+      {required this.methodIdxDiff,
+      required this.accessFlags,
+      required this.codeOff});
 }
