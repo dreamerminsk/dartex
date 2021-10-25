@@ -18,3 +18,9 @@ class StringDataItem {
 
   StringDataItem({required this.utf16Size, required this.data});
 }
+
+class TypeIdItem {
+  int descriptorIdx; //uint
+
+  TypeIdItem({required this.descriptorIdx});
+}
