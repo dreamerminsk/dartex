@@ -142,8 +142,11 @@ class TypeList {
   int size; //uint
   List<TypeItem> list; //type_item[size]
 
-  TypeList({required this.size, required this.list})
+  TypeList({required this.size, required this.list});
 }
 
 class TypeItem {
+  int typeIdx; //ushort
+
+  TypeItem({required this.typeIdx});
 }
