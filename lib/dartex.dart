@@ -53,3 +53,24 @@ class MethodIdItem {
   MethodIdItem(
       {required this.classIdx, required this.protoIdx, required this.nameIdx});
 }
+
+class ClassDefItem {
+  int classIdx; //uint
+  int accessFlags; //uint
+  int superclassIdx; //uint
+  int interfacesOff; //uint
+  int sourceFileIdx; //uint
+  int annotationsOff; //uint
+  int classDataOff; //uint
+  int staticValuesOff; //uint
+
+  ClassDefItem(
+      {required this.classIdx,
+      required this.accessFlags,
+      required this.superclassIdx,
+      required this.interfacesOff,
+      required this.sourceFileIdx,
+      required this.annotationsOff,
+      required this.classDataOff,
+      required this.staticValuesOff});
+}
