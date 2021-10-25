@@ -35,3 +35,12 @@ class ProtoIdItem {
       required this.returnTypeIdx,
       required this.parametersOff});
 }
+
+class FieldIdItem {
+  int classIdx; //ushort
+  int typeIdx; //ushort
+  int nameIdx; //uint
+
+  FieldIdItem(
+      {required this.classIdx, required this.typeIdx, required this.nameIdx});
+}
