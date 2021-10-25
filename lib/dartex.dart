@@ -85,3 +85,16 @@ class CallSiteIdItem {
 class CallSiteItem {
   CallSiteItem();
 }
+
+class MethodHandleItem {
+  int methodHandleType; //ushort
+  int unused; //ushort
+  int fieldOrMethodId; //ushort
+  int unused2; //ushort
+
+  MethodHandleItem(
+      {required this.methodHandleType,
+      required this.unused,
+      required this.fieldOrMethodId,
+      required this.unused2});
+}
