@@ -44,3 +44,12 @@ class FieldIdItem {
   FieldIdItem(
       {required this.classIdx, required this.typeIdx, required this.nameIdx});
 }
+
+class MethodIdItem {
+  int classIdx; //ushort
+  int protoIdx; //ushort
+  int nameIdx; //uint
+
+  MethodIdItem(
+      {required this.classIdx, required this.protoIdx, required this.nameIdx});
+}
