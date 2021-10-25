@@ -122,4 +122,9 @@ class ClassDataItem {
 
 class EncodedMethod {}
 
-class EncodedField {}
+class EncodedField {
+  int fieldIdxDiff; //uleb128
+  int accessFlags; //uleb128
+
+  EncodedField({required this.fieldIdxDiff, required this.accessFlags});
+}
