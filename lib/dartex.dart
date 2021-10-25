@@ -80,3 +80,7 @@ class CallSiteIdItem {
 
   CallSiteIdItem({required this.callSiteOff});
 }
+
+class CallSiteItem {
+  CallSiteItem();
+}
