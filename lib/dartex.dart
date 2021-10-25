@@ -137,3 +137,13 @@ class EncodedMethod {
       required this.accessFlags,
       required this.codeOff});
 }
+
+class TypeList {
+  int size; //uint
+  List<TypeItem> list; //type_item[size]
+
+  TypeList({required this.size, required this.list})
+}
+
+class TypeItem {
+}
