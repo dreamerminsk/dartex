@@ -74,3 +74,9 @@ class ClassDefItem {
       required this.classDataOff,
       required this.staticValuesOff});
 }
+
+class CallSiteIdItem {
+  int callSiteOff; //uint
+
+  CallSiteIdItem({required this.callSiteOff});
+}
