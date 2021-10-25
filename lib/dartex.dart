@@ -98,3 +98,28 @@ class MethodHandleItem {
       required this.fieldOrMethodId,
       required this.unused2});
 }
+
+class ClassDataItem {
+  int staticFieldsSize; //uleb128
+  int instanceFieldsSize; //uleb128
+  int directMethodsSize; //uleb128
+  int virtualMethodsSize; //uleb128
+  List<EncodedField> staticFields; //encoded_field[static_fields_size]
+  List<EncodedField> instanceFields; //encoded_field[instance_fields_size]
+  List<EncodedMethod> directMethods; //encoded_method[direct_methods_size]
+  List<EncodedMethod> virtualMethods; //encoded_method[virtual_methods_size]
+
+  ClassDataItem(
+      {required this.staticFieldsSize,
+      required this.instanceFieldsSize,
+      required this.directMethodsSize,
+      required this.virtualMethodsSize,
+      required this.staticFields,
+      required this.instanceFields,
+      required this.directMethods,
+      required this.virtualMethods});
+}
+
+class EncodedMethod {}
+
+class EncodedField {}
