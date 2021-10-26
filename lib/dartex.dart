@@ -175,8 +175,6 @@ class CodeItem {
       required this.handlers});
 }
 
-class EncodedCatchHandlerList {}
-
 class TryItem {
   int startAddr; //uint
   int insnCount; //ushort
@@ -187,3 +185,12 @@ class TryItem {
       required this.insnCount,
       required this.handlerOff});
 }
+
+class EncodedCatchHandlerList {
+  int size; //uleb128
+  List<EncodedCatchHandler> list; //encoded_catch_handler[handlers_size]
+
+  EncodedCatchHandlerList({required this.size, required this.list});
+}
+
+class EncodedCatchHandler {}
