@@ -150,3 +150,31 @@ class TypeItem {
 
   TypeItem({required this.typeIdx});
 }
+
+class CodeItem {
+  int registersSize; //ushort
+  int insSize; //ushort
+  int outsSize; //ushort
+  int triesSize; //ushort
+  int debugInfoOff; //uint
+  int insnsSize; //uint
+  List<int> insns; //ushort[insns_size]
+  //padding	ushort (optional) = 0
+  List<TryItem> tries; //try_item[tries_size] (optional)
+  EncodedCatchHandlerList handlers; //encoded_catch_handler_list (optional)
+
+  CodeItem(
+      {required this.registersSize,
+      required this.insSize,
+      required this.outsSize,
+      required this.triesSize,
+      required this.debugInfoOff,
+      required this.insnsSize,
+      required this.insns,
+      required this.tries,
+      required this.handlers});
+}
+
+class EncodedCatchHandlerList {}
+
+class TryItem {}
