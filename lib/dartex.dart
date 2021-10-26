@@ -193,4 +193,11 @@ class EncodedCatchHandlerList {
   EncodedCatchHandlerList({required this.size, required this.list});
 }
 
-class EncodedCatchHandler {}
+class EncodedCatchHandler {
+  int size; //sleb128
+  List<EncodedTypeAddrPair> handlers; //encoded_type_addr_pair[abs(size)]
+  EncodedCatchHandler({required this.size, required this.handlers});
+}
+
+class EncodedTypeAddrPair {
+}
