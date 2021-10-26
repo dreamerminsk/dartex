@@ -177,4 +177,13 @@ class CodeItem {
 
 class EncodedCatchHandlerList {}
 
-class TryItem {}
+class TryItem {
+  int startAddr; //uint
+  int insnCount; //ushort
+  int handlerOff; //ushort
+
+  TryItem(
+      {required this.startAddr,
+      required this.insnCount,
+      required this.handlerOff});
+}
