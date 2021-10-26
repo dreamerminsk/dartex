@@ -202,4 +202,9 @@ class EncodedCatchHandler {
       {required this.size, required this.handlers, required this.catchAllAddr});
 }
 
-class EncodedTypeAddrPair {}
+class EncodedTypeAddrPair {
+  int typeIdx; //uleb128
+  int addr; //uleb128
+
+  EncodedTypeAddrPair({required this.typeIdx, required this.addr});
+}
